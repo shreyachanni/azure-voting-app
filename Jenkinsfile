@@ -3,11 +3,9 @@
 pipeline {
   agent any
   stages {
-    stage('Call Library Hello-World Function') {
+    stage('Verify Branch') {
       steps {
-        script {
-          helloWorld()
-        }
+        echo $GIT_BRANCH
       }
     }
   }
